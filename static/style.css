@@ -1,0 +1,152 @@
+body {
+    background-color: #121212;
+    color: #e0ffe0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #004d00;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: #e0ffe0;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.car-card {
+    background-color: #2a2a2a;
+    padding: 1.2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.car-card h3 {
+    color: #00cc44;
+    margin-bottom: 1rem;
+}
+
+.button {
+    background-color: #006600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #009900;
+}
+
+.button.return {
+    background-color: #cc0000;
+}
+
+.button.return:hover {
+    background-color: #ff3333;
+}
+
+.unavailable {
+    color: #cccccc;
+    font-style: italic;
+}
+
+.flash {
+    background-color: #003300;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    color: #e0ffe0;
+}
+
+.car-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.car-card {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.car-card h3 {
+    color: #00cc44;
+}
+
+.button.secondary {
+    background-color: #004d00;
+}
+
+.button.secondary:hover {
+    background-color: #007700;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.car-card {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.car-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.car-image {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+}

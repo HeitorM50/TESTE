@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Descrição - {{ car.model }}{% endblock %}
+{% block content %}
+<h2>Descrição do {{ car.model }}</h2>
+<img class="car-image" src="{{ url_for('static', filename='images/' + car.image) }}" alt="{{ car.model }}">
+<ul>
+    <li><strong>Modelo:</strong> {{ car.model }}</li>
+    <li><strong>Ano:</strong> {{ car.year }}</li>
+    <li><strong>Cor:</strong> {{ car.color }}</li>
+    <li><strong>Quilometragem:</strong> {{ car.mileage }} km</li>
+    <li><strong>Acessórios:</strong> {{ car.accessories | join(', ') }}</li>
+</ul>
+<a class="button" href="{{ url_for('dashboard') }}">Voltar</a>
+{% endblock %}

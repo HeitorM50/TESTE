@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Devolver Carro{% endblock %}
+{% block content %}
+<h2>Seus carros alugados</h2>
+{% if user_rentals %}
+<ul>
+    {% for rental in user_rentals %}
+        <li>{{ rental.car.model }} - 
+            <a class="button" href="{{ url_for('return_car', car_id=rental.car.car_id) }}">Devolver</a>
+        </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Você não possui carros alugados no momento.</p>
+{% endif %}
+{% endblock %}

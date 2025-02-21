@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Disponibilidade - {{ car.model }}{% endblock %}
+{% block content %}
+<h2>Disponibilidade de {{ car.model }}</h2>
+<ul>
+    {% if rentals %}
+        {% for rental in rentals %}
+        <li>{{ rental.start_date.strftime('%d/%m/%Y') }} até {{ rental.end_date.strftime('%d/%m/%Y') }} - Alugado por {{ rental.user }}</li>
+        {% endfor %}
+    {% else %}
+        <li>Este carro está disponível para qualquer data.</li>
+    {% endif %}
+</ul>
+{% endblock %}

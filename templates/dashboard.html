@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Painel{% endblock %}
+{% block content %}
+<h2>Carros disponíveis</h2>
+<div class="car-grid">
+    {% for car in cars %}
+    <div class="car-card">
+        <img src="{{ url_for('static', filename='images/' + car.image) }}" alt="Imagem do {{ car.model }}">
+        <h3>{{ car.model }} ({{ car.year }})</h3>
+        <div class="buttons">
+            <a class="button" href="{{ url_for('rent_car', car_id=car.car_id) }}">Alugar</a>
+            <a class="button" href="{{ url_for('availability', car_id=car.car_id) }}">Ver Disponibilidade</a>
+            <a class="button" href="{{ url_for('description', car_id=car.car_id) }}">Ver Descrição</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Alugar {{ car.model }}{% endblock %}
+{% block content %}
+<h2>Alugar {{ car.model }}</h2>
+<form method="POST">
+    <label>Data de início:</label>
+    <input type="date" name="start_date" required><br><br>
+    <label>Data de término:</label>
+    <input type="date" name="end_date" required><br><br>
+    <button class="button" type="submit">Confirmar Aluguel</button>
+</form>
+{% endblock %}
