@@ -8,7 +8,7 @@
 <body>
     <nav class="navbar">
         <a href="{{ url_for('home') }}">Início</a>
-        {% if 'user' in session %}
+        {% if 'username' in session %}
             <a href="{{ url_for('dashboard') }}">Painel</a>
             <a href="{{ url_for('logout') }}">Sair</a>
         {% else %}

@@ -1,5 +1,5 @@
 class Car:
-    def __init__(self, car_id, model, year, image, color, mileage, accessories, available=True):
+    def __init__(self, car_id, model, year, image, color, mileage, accessories):
         self.car_id = car_id
         self.model = model
         self.year = year
@@ -7,4 +7,4 @@ class Car:
         self.color = color
         self.mileage = mileage
         self.accessories = accessories
-        self.available = available
+        self.is_available = True

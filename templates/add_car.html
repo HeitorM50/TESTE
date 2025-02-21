@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Carro</title>
+</head>
+<body>
+    <h1>Adicionar Novo Carro</h1>
+    <form method="POST">
+        <label>Modelo: <input type="text" name="model" required></label><br>
+        <label>Ano: <input type="number" name="year" required></label><br>
+        <label>Cor: <input type="text" name="color" required></label><br>
+        <label>Quilometragem: <input type="number" name="mileage" required></label><br>
+        <label>Imagem (nome do arquivo): <input type="text" name="image" required></label><br>
+        <label>Acessórios:</label><br>
+        <input type="checkbox" name="accessories" value="Ar-condicionado"> Ar-condicionado<br>
+        <input type="checkbox" name="accessories" value="Direção hidráulica"> Direção hidráulica<br>
+        <input type="checkbox" name="accessories" value="Airbag"> Airbag<br>
+        <input type="checkbox" name="accessories" value="Câmbio automático"> Câmbio automático<br>
+        <input type="submit" value="Adicionar">
+    </form>
+    <a href="{{ url_for('dashboard') }}">Voltar ao Dashboard</a>
+</body>
+</html>

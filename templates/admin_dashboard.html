@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Painel do Administrador{% endblock %}
+{% block content %}
+<h2>Painel do Administrador</h2>
+<ul>
+    {% for car in cars %}
+        <li>{{ car.model }} - {{ car.year }} 
+            <a href="{{ url_for('remove_car', car_id=car.car_id) }}" class="button">Remover</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('add_car') }}" class="button">Adicionar Carro</a>
+{% endblock %}
